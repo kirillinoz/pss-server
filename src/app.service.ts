@@ -30,6 +30,10 @@ export class AppService {
     const titlesPath = 'storage/titles.json';
     const coversPath = 'storage/{id}/cover.jpg';
 
+    if (!existsSync(titlesPath)) {
+      return [];
+    }
+
     // Read the existing titles and covers from the JSON files
     const collection = JSON.parse(readFileSync(titlesPath, 'utf8'));
 
