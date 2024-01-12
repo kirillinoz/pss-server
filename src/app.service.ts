@@ -6,7 +6,6 @@ import {
   mkdirSync,
   createReadStream,
   statSync,
-  unlinkSync,
   rmSync,
 } from 'fs';
 import { v4 as uuidv4 } from 'uuid';
